@@ -6,7 +6,7 @@
     }
 }
 
-.header {
+.l-header {
     padding: 30px 88px;
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
     }
 }
 
-.menuList {
+.l-menuList {
     display: flex;
     font-size: $font-size-medium;
     @include pad{
@@ -31,9 +31,4 @@
             padding: 0 20px;
         }
     }
-}
-
-.banner{
-    height: 840px;
-    background: url(/images/week3/banner.png) center/cover;
 }

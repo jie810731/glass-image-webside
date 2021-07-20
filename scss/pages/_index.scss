@@ -1,13 +1,35 @@
-body {
+.banner {
+    height: 840px;
+    background: url(/images/week3/banner.png) center/cover;
     color: $darker-primary-color;
+    &__wording {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        h2 {
+            font-size: 64px;
+            font-weight: bold;
+            @include pad {
+                font-size: $font-size-xx-large;
+            }
+        }
+        h3 {
+            font-size: $font-size-x-large;
+            @include pad {
+                font-size: $font-size-medium;
+            }
+        }
+    }
 }
 
 .ourTarget {
-    padding: 60px 0 80px 0;
+    padding: 60px 0 80px;
     background: $lighter-primary-color;
-    text-align: center;
+    color: $darker-primary-color;
     @include pad {
-        padding: 40px 0 56px 0;
+        padding: 40px 0 56px;
     }
     &__list {
         display: flex;
@@ -20,6 +42,7 @@ body {
             margin-left: auto;
         }
         &__item {
+            text-align: center;
             @include pad {
                 margin-bottom: 44px;
             }
@@ -31,29 +54,34 @@ body {
             }
             &__title {
                 margin-top: 24px;
-                font-size: $font-size-medium;
+                font-size: $font-size-large;
                 font-weight: bold;
             }
             &__body {
                 width: 255px;
                 margin-top: 8px;
+                color: $color-black;
             }
         }
     }
 }
 
 .classicTypes {
-    padding: 60px 0 48px 0;
+    padding: 60px 0 48px;
     color: $darker-primary-color;
-    @include pad{
-        padding: 40px 0 48px 0;
+    @include pad {
+        padding: 40px 0 48px;
     }
     &__list {
+        margin-top: 40px;
+        @include pad {
+            margin-top: 32px;
+        }
         &__item {
-            margin-bottom: 32px;
             display: flex;
             align-items: center;
-            @include pad{
+            margin-bottom: 32px;
+            @include pad {
                 margin-bottom: 8px;
             }
             &:nth-child(even) {
@@ -72,14 +100,14 @@ body {
             &__body {
                 margin: 0 30px;
                 color: $primary-color;
-                a {
-                    display: block;
-                }
-                h3 {
-                    font-family: Robot sans-serif;
+                display: block;
+                &__title {
+                    font-family: Roboto, sans-serif;
                     font-style: italic;
+                    font-weight: 900;
                     text-transform: uppercase;
-                    @include pad{
+                    font-size: $font-size-xx-large;
+                    @include pad {
                         font-size: 28px;
                     }
                 }
@@ -109,12 +137,16 @@ body {
     background: url(/images/week3/bg.png) center/cover;
     padding: 60px 0 80px 0;
     color: $color-white;
-    @include pad{
+    @include pad {
         padding: 40px 0 56px 0;
     }
     &__list {
         display: flex;
         justify-content: space-between;
+        margin-top: 40px;
+        @include pad {
+            margin-top: 32px;
+        }
         &__item {
             position: relative;
             &__img {
@@ -131,7 +163,7 @@ body {
                 text-align: center;
                 color: $darker-primary-color;
                 font-weight: bold;
-                font-family: Robot sans-serif;
+                font-family: Roboto, sans-serif;
                 font-size: 72px;
                 line-height: 108px;
                 @include pad {
@@ -144,7 +176,8 @@ body {
 
 .customRecommend {
     padding: 60px 0 80px 0;
-    @include pad{
+    color: $darker-primary-color;
+    @include pad {
         padding: 40px 0 24px 0;
     }
     &__list {
@@ -198,22 +231,21 @@ body {
 .contactUs {
     padding: 60px 0 80px 0;
     background: $color-light-grayish-red;
-    color: $color-dark;
-    @include pad{
+    color: $color-black;
+    @include pad {
         padding: 40px 0 56px 0;
         font-size: 14px;
     }
     &__form {
-        margin: 0 auto;
+        margin: 24px auto 0;
         width: 730px;
         @include pad {
             width: 450px;
         }
         &__discript {
             font-size: $font-size-medium;
-            margin-top: 24px;
             margin-bottom: 20px;
-            @include pad{
+            @include pad {
                 font-size: $font-size-base;
             }
         }
@@ -223,22 +255,22 @@ body {
         }
         &__submit {
             display: block;
-            margin: 40px auto 0 auto;
+            margin: 40px auto 0;
             padding: 16px 143px;
             color: $color-white;
             background: $primary-color;
-            @include pad{
-                margin: 20px auto 0 auto;
+            @include pad {
+                margin: 20px auto 0;
             }
         }
     }
 }
 
 .footer {
-    padding: 44px 0 39px 0;
+    padding: 44px 0 39px;
     background: $primary-color;
     color: $color-white;
-    .menuList {
+    .l-menuList {
         font-size: $font-size-base;
     }
     a {
@@ -258,7 +290,7 @@ body {
             img {
                 width: 48px;
                 display: block;
-                @include pad{
+                @include pad {
                     width: 24px;
                 }
             }
@@ -266,7 +298,7 @@ body {
     }
     &__contact {
         margin-top: 36px;
-        @include pad{
+        @include pad {
             margin-top: 18px;
         }
         &__list {
@@ -274,20 +306,20 @@ body {
             border-bottom: 1px solid $color-white;
             &__item {
                 margin-bottom: 22px;
-                @include pad{
+                @include pad {
                     margin-top: 12px;
                 }
                 a {
                     display: block;
                     font-size: $font-size-x-large;
                     line-height: 1em;
-                    @include pad{
+                    @include pad {
                         font-size: 20px;
                     }
                     img {
                         width: 36px;
                         margin-right: 22px;
-                        @include pad{
+                        @include pad {
                             width: 18px;
                             margin-right: 11px;
                         }
@@ -306,10 +338,19 @@ body {
             font-size: $font-size-light;
             &__item {
                 margin-left: 48px;
-                @include pad{
+                @include pad {
                     margin-left: 24px;
                 }
             }
         }
+    }
+}
+
+.p-index-sectionTitle {
+    font-size: $font-size-xx-large;
+    font-weight: bold;
+    text-align: center;
+    @include pad {
+        font-size: 32px;
     }
 }
