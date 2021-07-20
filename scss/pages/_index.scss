@@ -1,0 +1,315 @@
+body {
+    color: $darker-primary-color;
+}
+
+.ourTarget {
+    padding: 60px 0 80px 0;
+    background: $lighter-primary-color;
+    text-align: center;
+    @include pad {
+        padding: 40px 0 56px 0;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 48px;
+        @include pad {
+            width: 615px;
+            flex-wrap: wrap;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &__item {
+            @include pad {
+                margin-bottom: 44px;
+            }
+            &__img {
+                height: 83px;
+                width: 83px;
+                display: block;
+                margin: 0 auto;
+            }
+            &__title {
+                margin-top: 24px;
+                font-size: $font-size-medium;
+                font-weight: bold;
+            }
+            &__body {
+                width: 255px;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+.classicTypes {
+    padding: 60px 0 48px 0;
+    color: $darker-primary-color;
+    @include pad{
+        padding: 40px 0 48px 0;
+    }
+    &__list {
+        &__item {
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            @include pad{
+                margin-bottom: 8px;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                @include pad {
+                    flex-direction: row;
+                }
+            }
+            &__img {
+                width: 635px;
+                display: block;
+                @include pad {
+                    width: 390px;
+                }
+            }
+            &__body {
+                margin: 0 30px;
+                color: $primary-color;
+                a {
+                    display: block;
+                }
+                h3 {
+                    font-family: Robot sans-serif;
+                    font-style: italic;
+                    text-transform: uppercase;
+                    @include pad{
+                        font-size: 28px;
+                    }
+                }
+                img,
+                span {
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+                img {
+                    width: 44px;
+                    @include pad {
+                        width: 36px;
+                    }
+                }
+                span {
+                    font-size: $font-size-xx-large;
+                    @include pad {
+                        font-size: 26px
+                    }
+                }
+            }
+        }
+    }
+}
+
+.feet {
+    background: url(/images/week3/bg.png) center/cover;
+    padding: 60px 0 80px 0;
+    color: $color-white;
+    @include pad{
+        padding: 40px 0 56px 0;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            position: relative;
+            &__img {
+                max-width: 540px;
+                @include pad {
+                    max-width: 330px;
+                }
+            }
+            &__wording {
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 100%;
+                text-align: center;
+                color: $darker-primary-color;
+                font-weight: bold;
+                font-family: Robot sans-serif;
+                font-size: 72px;
+                line-height: 108px;
+                @include pad {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+.customRecommend {
+    padding: 60px 0 80px 0;
+    @include pad{
+        padding: 40px 0 24px 0;
+    }
+    &__list {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        @include pad {
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 255px;
+            font-size: $font-size-light;
+            color: $color-very-black-blue;
+            border: 1px solid #DEE2E6;
+            box-shadow: 0 2px 6px #00000029;
+            border-radius: 4px;
+            @include pad {
+                width: 330px;
+                margin-bottom: 32px;
+            }
+            &__img {
+                display: block;
+                height: 256px;
+                margin-bottom: 16px;
+                background-size: cover;
+                background-position: top;
+            }
+            &__body {
+                height: 204px;
+                padding: 0 16px;
+                display: flex;
+                flex-direction: column;
+                &__title {
+                    margin-bottom: 8px;
+                    font-weight: 500;
+                }
+                &__content {
+                    font-size: $font-size-base;
+                    margin-bottom: auto;
+                }
+                &__date {
+                    color: $color-very-dark-gray;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+.contactUs {
+    padding: 60px 0 80px 0;
+    background: $color-light-grayish-red;
+    color: $color-dark;
+    @include pad{
+        padding: 40px 0 56px 0;
+        font-size: 14px;
+    }
+    &__form {
+        margin: 0 auto;
+        width: 730px;
+        @include pad {
+            width: 450px;
+        }
+        &__discript {
+            font-size: $font-size-medium;
+            margin-top: 24px;
+            margin-bottom: 20px;
+            @include pad{
+                font-size: $font-size-base;
+            }
+        }
+        &__suggest {
+            height: 136px;
+            resize: none;
+        }
+        &__submit {
+            display: block;
+            margin: 40px auto 0 auto;
+            padding: 16px 143px;
+            color: $color-white;
+            background: $primary-color;
+            @include pad{
+                margin: 20px auto 0 auto;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 44px 0 39px 0;
+    background: $primary-color;
+    color: $color-white;
+    .menuList {
+        font-size: $font-size-base;
+    }
+    a {
+        color: $color-white;
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__mediaList {
+            display: flex;
+            align-items: center;
+            a {
+                display: block;
+                padding: 0 16px;
+            }
+            img {
+                width: 48px;
+                display: block;
+                @include pad{
+                    width: 24px;
+                }
+            }
+        }
+    }
+    &__contact {
+        margin-top: 36px;
+        @include pad{
+            margin-top: 18px;
+        }
+        &__list {
+            padding-bottom: 8px;
+            border-bottom: 1px solid $color-white;
+            &__item {
+                margin-bottom: 22px;
+                @include pad{
+                    margin-top: 12px;
+                }
+                a {
+                    display: block;
+                    font-size: $font-size-x-large;
+                    line-height: 1em;
+                    @include pad{
+                        font-size: 20px;
+                    }
+                    img {
+                        width: 36px;
+                        margin-right: 22px;
+                        @include pad{
+                            width: 18px;
+                            margin-right: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__rights {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-base;
+        &__policyList {
+            display: flex;
+            font-size: $font-size-light;
+            &__item {
+                margin-left: 48px;
+                @include pad{
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
+}
