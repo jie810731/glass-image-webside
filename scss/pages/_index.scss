@@ -2,6 +2,9 @@
     height: 840px;
     background: url(/images/week3/banner.png) center/cover;
     color: $darker-primary-color;
+    @include mobile{
+        height: 394px;
+    }
     &__wording {
         height: 100%;
         display: flex;
@@ -14,11 +17,18 @@
             @include pad {
                 font-size: $font-size-xx-large;
             }
+            @include mobile{
+                font-size: 32px;
+            }
         }
         h3 {
             font-size: $font-size-x-large;
             @include pad {
                 font-size: $font-size-medium;
+            }
+            @include mobile {
+                font-size: $font-size-base;
+                font-family: PingFang, sans-serif;
             }
         }
     }
@@ -31,6 +41,14 @@
     @include pad {
         padding: 40px 0 56px;
     }
+    @include mobile{
+        padding: 32px 0 0;
+    }
+    .p-index-sectionTitle{
+        @include mobile{
+            font-size: $font-size-large;
+        }
+    }
     &__list {
         display: flex;
         justify-content: space-between;
@@ -41,10 +59,17 @@
             margin-right: auto;
             margin-left: auto;
         }
+        @include mobile{
+            width: 255px;
+            margin-top: 20px;
+        }
         &__item {
             text-align: center;
             @include pad {
                 margin-bottom: 44px;
+            }
+            @include mobile{
+                margin-top: 40px;
             }
             &__img {
                 height: 83px;
@@ -72,10 +97,16 @@
     @include pad {
         padding: 40px 0 48px;
     }
+    @include mobile{
+        padding: 32px 0;
+    }
     &__list {
         margin-top: 40px;
         @include pad {
             margin-top: 32px;
+        }
+        @include mobile{
+            margin-top: 20px;
         }
         &__item {
             display: flex;
@@ -83,6 +114,9 @@
             margin-bottom: 32px;
             @include pad {
                 margin-bottom: 8px;
+            }
+            @include mobile{
+                position: relative;
             }
             &:nth-child(even) {
                 flex-direction: row-reverse;
@@ -101,6 +135,12 @@
                 margin: 0 30px;
                 color: $primary-color;
                 display: block;
+                @include mobile{
+                    position: absolute;
+                    margin: 0 auto;
+                    width: 100%;
+                    text-align: center;
+                }
                 &__title {
                     font-family: Roboto, sans-serif;
                     font-style: italic;
@@ -135,10 +175,13 @@
 
 .feet {
     background: url(/images/week3/bg.png) center/cover;
-    padding: 60px 0 80px 0;
+    padding: 60px 0 80px;
     color: $color-white;
     @include pad {
-        padding: 40px 0 56px 0;
+        padding: 40px 0 56px;
+    }
+    @include mobile{
+        padding: 32px 0 24px;
     }
     &__list {
         display: flex;
@@ -147,12 +190,25 @@
         @include pad {
             margin-top: 32px;
         }
+        @include mobile{
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
         &__item {
             position: relative;
+            @include mobile{
+                margin-bottom: 16px;
+            }
             &__img {
                 max-width: 540px;
                 @include pad {
                     max-width: 330px;
+                }
+                @include mobile {
+                    max-width: 345px;
+                }
+                @include mobile-se {
+                    max-width: 320px;
                 }
             }
             &__wording {
@@ -175,10 +231,13 @@
 }
 
 .customRecommend {
-    padding: 60px 0 80px 0;
+    padding: 60px 0 80px ;
     color: $darker-primary-color;
     @include pad {
-        padding: 40px 0 24px 0;
+        padding: 40px 0 24px;
+    }
+    @include mobile {
+        padding: 32px 0 24px ;
     }
     &__list {
         margin-top: 40px;
@@ -187,6 +246,9 @@
         @include pad {
             margin-top: 32px;
             flex-wrap: wrap;
+        }
+        @include mobile{
+            margin-top: 20px;
         }
         &__item {
             width: 255px;
@@ -199,12 +261,19 @@
                 width: 330px;
                 margin-bottom: 32px;
             }
+            @include mobile{
+                width: 345px;
+                margin-bottom: 16px;
+            }
             &__img {
                 display: block;
                 height: 256px;
                 margin-bottom: 16px;
                 background-size: cover;
                 background-position: top;
+                @include mobile{
+                    width: 100%;
+                }
             }
             &__body {
                 height: 204px;
@@ -236,17 +305,35 @@
         padding: 40px 0 56px 0;
         font-size: 14px;
     }
+    @include mobile{
+        padding: 30px 0 40px ;
+    }
     &__form {
         margin: 24px auto 0;
         width: 730px;
         @include pad {
             width: 450px;
         }
+        @include mobile{
+            max-width: 345px;
+        }
+        @include mobile-se{
+            max-width: 320px;
+        }
         &__discript {
             font-size: $font-size-medium;
             margin-bottom: 20px;
             @include pad {
                 font-size: $font-size-base;
+            }
+            @include mobile{
+                margin-bottom: 8px;
+            }
+        }
+        &__row{
+            margin-bottom: 16px;
+            @include mobile{
+                margin-bottom: 8px;
             }
         }
         &__suggest {
@@ -262,6 +349,9 @@
             @include pad {
                 margin: 20px auto 0;
             }
+            @include mobile{
+                padding: 8px 54px;
+            }
         }
     }
 }
@@ -270,62 +360,95 @@
     padding: 44px 0 39px;
     background: $primary-color;
     color: $color-white;
-    .l-menuList {
-        font-size: $font-size-base;
+    @include mobile{
+        padding: 24px 0;
     }
     a {
         color: $color-white;
     }
-    &__head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &__mediaList {
+    &__main{
+        @include mobile{
             display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__head {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            a {
-                display: block;
-                padding: 0 16px;
-            }
-            img {
-                width: 48px;
-                display: block;
-                @include pad {
-                    width: 24px;
+            .l-menuList{
+                font-size: $font-size-base;
+                @include mobile{
+                    display: none;
                 }
             }
-        }
-    }
-    &__contact {
-        margin-top: 36px;
-        @include pad {
-            margin-top: 18px;
-        }
-        &__list {
-            padding-bottom: 8px;
-            border-bottom: 1px solid $color-white;
-            &__item {
-                margin-bottom: 22px;
-                @include pad {
-                    margin-top: 12px;
-                }
+            &__mediaList {
+                display: flex;
+                align-items: center;
                 a {
                     display: block;
-                    font-size: $font-size-x-large;
-                    line-height: 1em;
-                    @include pad {
-                        font-size: 20px;
+                    padding: 0 16px;
+                    @include mobile{
+                        padding: 0 12px;
                     }
-                    img {
-                        width: 36px;
-                        margin-right: 22px;
+                }
+                img {
+                    width: 48px;
+                    display: block;
+                    @include pad {
+                        width: 24px;
+                    }
+                }
+            }
+        }
+        &__contact {
+            margin-top: 36px;
+            @include pad {
+                margin-top: 18px;
+            }
+            @include mobile{
+                margin-top: 0;
+            }
+            &__list {
+                &__item {
+                    margin-bottom: 16px;
+                    @include pad {
+                        margin-top: 12px;
+                    }
+                    @include mobile{
+                        margin-top: 0;
+                    }
+                    a {
+                        display: block;
+                        font-size: $font-size-x-large;
+                        line-height: 1em;
                         @include pad {
-                            width: 18px;
-                            margin-right: 11px;
+                            font-size: 20px;
+                        }
+                        @include mobile{
+                            font-size: $font-size-base;
+                        }
+                        img {
+                            vertical-align: middle;
+                            width: 36px;
+                            margin-right: 22px;
+                            @include pad {
+                                width: 18px;
+                                margin-right: 11px;
+                            }
+                            @include mobile{
+                                max-width: 15px;
+                                margin-right: 5px;
+                            }
                         }
                     }
                 }
             }
+        }
+        &__hr{
+            height: 1px;
+            background: $color-white;
         }
     }
     &__rights {
@@ -333,13 +456,24 @@
         display: flex;
         justify-content: space-between;
         font-size: $font-size-base;
+        @include mobile{
+            flex-direction: column;
+            font-size: $font-size-light;
+        }
         &__policyList {
             display: flex;
             font-size: $font-size-light;
+            @include mobile{
+                flex-direction: column;
+            }
             &__item {
                 margin-left: 48px;
                 @include pad {
                     margin-left: 24px;
+                }
+                @include mobile{
+                    margin-top: 8px;
+                    margin-left: 0;
                 }
             }
         }
@@ -352,5 +486,8 @@
     text-align: center;
     @include pad {
         font-size: 32px;
+    }
+    @include mobile{
+        font-size: 20px;
     }
 }

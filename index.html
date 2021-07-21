@@ -7,36 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Noto+Sans?query=san">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto?query=roboto">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div class="l-header">
-        <h1>
+        <h1 class="l-header__logo">
             <a href="#">
                 <img src="images/week3/logo.png" alt="">
             </a>
         </h1>
         <nav>
             <ul class="l-menuList">
-                <li>
+                <li class="l-menuList__item">
                     <a href="">
                         系列鏡框
                     </a>
                 </li>
-                <li>
+                <li class="l-menuList__item">
                     <a href="">
                         門市據點
                     </a>
                 </li>
-                <li>
+                <li class="l-menuList__item">
                     <a href="">
                         部落格
                     </a>
                 </li>
-                <li>
+                <li class="l-menuList__item">
                     <a href="">
                         常見問題
                     </a>
@@ -171,14 +169,22 @@
             <p class="contactUs__form__discript">
                 我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
             </p>
-            <label>姓名</label>
-            <input type="text" placeholder="陳小明" class="form-control mb-2">
-            <label>聯絡電話</label>
-            <input type="tel" placeholder="0912-345-678" class="form-control mb-2">
-            <label>電子郵件</label>
-            <input type="email" placeholder="example@email.com" class="form-control mb-2">
-            <label>意見反應</label>
-            <textarea placeholder="請輸入您的意見" class="contactUs__form__suggest form-control mb-2"></textarea>
+            <div class="contactUs__form__row">
+                <label>姓名</label>
+                <input type="text" placeholder="陳小明" class="form-control">
+            </div>
+            <div class="contactUs__form__row">
+                <label>聯絡電話</label>
+                <input type="tel" placeholder="0912-345-678" class="form-control">
+            </div>
+            <div class="contactUs__form__row">
+                <label>電子郵件</label>
+                <input type="email" placeholder="example@email.com" class="form-control">
+            </div>
+            <div class="contactUs__form__row">
+                <label>意見反應</label>
+                <textarea placeholder="請輸入您的意見" class="contactUs__form__suggest form-control mb-2"></textarea>
+            </div>
             <input type="checkbox">
             <label>我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
             <button type="submit" class="contactUs__form__submit">確認送出</button>
@@ -186,60 +192,63 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <div class="footer__head">
-                <ul class="l-menuList">
-                    <li>
-                        <a href="#">
-                            首頁
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            系列鏡框
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            門市據點
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            部落格
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            常見問題
-                        </a>
-                    </li>
-                </ul>
-                <ul class="footer__head__mediaList">
-                    <li>
-                        <a href=""><img src="images/week3/icon-fb.svg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="images/week3/icon-ig.svg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="images/week3/icon-line.svg" alt=""></a>
-                    </li>
-                </ul>
+            <div class="footer__main">
+                <div class="footer__main__head">
+                    <ul class="l-menuList">
+                        <li class="l-menuList__item">
+                            <a href="#">
+                                首頁
+                            </a>
+                        </li>
+                        <li class="l-menuList__item">
+                            <a href="">
+                                系列鏡框
+                            </a>
+                        </li>
+                        <li class="l-menuList__item">
+                            <a href="">
+                                門市據點
+                            </a>
+                        </li>
+                        <li class="l-menuList__item">
+                            <a href="">
+                                部落格
+                            </a>
+                        </li>
+                        <li class="l-menuList__item">
+                            <a href="">
+                                常見問題
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__main__head__mediaList">
+                        <li>
+                            <a href=""><img src="images/week3/icon-fb.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/week3/icon-ig.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/week3/icon-line.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__main__contact">
+                    <ul class="footer__main__contact__list">
+                        <li class="footer__main__contact__list__item">
+                            <a href="tel:+0800-000-000">
+                                <img src="images/week3/icon-phone.svg" alt="">0800-000-000
+                            </a>
+                        </li>
+                        <li class="footer__main__contact__list__item">
+                            <a href="mailto:glasses@business.com">
+                                <img src="images/week3/icon-mail.svg" alt="">glasses@business.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer__contact">
-                <ul class="footer__contact__list">
-                    <li class="footer__contact__list__item">
-                        <a href="tel:+0800-000-000">
-                            <img src="images/week3/icon-phone.svg" alt="">0800-000-000
-                        </a>
-                    </li>
-                    <li class="footer__contact__list__item">
-                        <a href="mailto:glasses@business.com">
-                            <img src="images/week3/icon-mail.svg" alt="">glasses@business.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <hr class="footer__hr">
             <div class="footer__rights">
                 <p>Copyright © 2020 Glasses.All rights reserved.</p>
                 <ul class="footer__rights__policyList">
