@@ -1,6 +1,0 @@
-[submodule "webLayoutTraining1st"]
-	path = webLayoutTraining1st
-	url = https://github.com/hexschool/webLayoutTraining1st.git
-[submodule "images"]
-	path = images
-	url = https://github.com/hexschool/webLayoutTraining1st.git
