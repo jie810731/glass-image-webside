@@ -1,0 +1,66 @@
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    @include pad{
+        max-width: 690px;
+    }
+    @include mobile{
+        max-width: 345px;
+    }
+    @include mobile-se{
+        max-width: 320px;
+    }
+}
+
+.l-header {
+    padding: 30px 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-color;
+    @include mobile{
+        flex-direction: column;
+        padding: 0;
+    }
+    &__logo{
+        img{
+            width: 80px;
+            @include mobile{
+                width: 48px;
+                padding: 10px 0;
+            }
+        }
+    }
+    a {
+        display: block;
+    }
+}
+
+.l-menuList {
+    display: flex;
+    font-size: $font-size-medium;
+    text-align: center;
+    justify-content: center;
+    @include pad{
+        font-size: 20px;
+    }
+    @include mobile{
+        flex-wrap: wrap;
+    }
+    &__item{
+        @include mobile{
+            width: 187px;
+        }
+        a {
+            padding: 0 32px;
+            display: block;
+            color: $color-white;
+            @include pad{
+                padding: 0 20px;
+            }
+            @include mobile{
+                border: 1px solid $color-white;
+            }
+        }
+    }
+}
