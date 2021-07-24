@@ -51,6 +51,9 @@
         @include mobile{
             width: 187px;
         }
+        @include mobile-se{
+            width: 100%;
+        }
         a {
             padding: 0 32px;
             display: block;

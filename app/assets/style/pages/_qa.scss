@@ -1,0 +1,75 @@
+.qa{
+    padding: 96px 0 128px;
+    @include pad{
+        padding: 60px 0 72px;
+    }
+    @include mobile{
+        padding: 28px 0 36px;
+    }
+    &__title{
+        margin-bottom: 60px;
+        padding-left: 16px;
+        border-left: 8px solid $primary-color;
+        font-size: $font-size-xx-large;
+        line-height: 80px;
+        font-weight: bold;
+        @include pad{
+            border-left: 4px solid $primary-color;
+            margin-bottom: 40px;
+            line-height: 1em;
+        }
+        @include mobile{
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+    }
+    &__h3{
+        font-size: 32px;
+        margin-bottom: 36px;
+        font-weight: bold;
+        @include pad{
+            margin-bottom: 32px;
+        }
+        @include mobile{
+            margin-bottom: 24px;
+            font-size: 20px;
+        }
+    }
+    &__list{
+        &__item{
+            margin-bottom: 32px;
+            @include pad{
+                margin-bottom: 24px;
+            }
+            @include mobile{
+                margin-bottom: 20px;
+            }
+            &__question{
+                font-size: $font-size-medium;
+                font-weight: bold;
+                margin-bottom: 16px;
+                @include mobile{
+                    font-size: $font-size-base;
+                    margin-bottom: 8px;
+                }
+            }
+            &__answer{
+                width: 920px;
+                padding-left: 95px;
+                @include pad{
+                    width: 630px;
+                    padding-left: 59px;
+                }
+                @include mobile{
+                    width: 100%;
+                    padding-left: 0;
+                }
+                p{
+                    @include mobile{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
