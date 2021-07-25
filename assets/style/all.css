@@ -490,7 +490,7 @@ a {
               font-size: 26px; } }
 
 .feet {
-  background: url(/assets/images/week3/bg.png) center/cover;
+  background: url(../images/week3/bg.png) center/cover;
   padding: 60px 0 80px;
   color: #FFFFFF; }
   @media (max-width: 992px) {
