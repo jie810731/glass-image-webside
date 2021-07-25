@@ -317,7 +317,7 @@ a {
 
 .banner {
   height: 840px;
-  background: url(assets/images/week3/banner.png) center/cover;
+  background: url(../images/week3/banner.png) center/cover;
   color: #650300; }
   @media (max-width: 767px) {
     .banner {
