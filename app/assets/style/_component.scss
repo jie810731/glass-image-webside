@@ -1,0 +1,35 @@
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 1.3rem 1rem;
+    font-size: 1rem;
+    border: 1px solid $color-black;
+    background-color: transparent;
+}
+.form-select{
+    padding: .5rem 1.4rem;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $color-dark-grayish-blue;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.c-pageHeading{
+    padding-left: 16px;
+    border-left: 8px solid $primary-color;
+    font-size: $font-size-xx-large;
+    line-height: 80px;
+    font-weight: bold;
+    @include pad{
+        border-left: 4px solid $primary-color;
+        margin-bottom: 40px;
+        line-height: 1em;
+    }
+    @include mobile{
+        padding-left: 8px;
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+}
