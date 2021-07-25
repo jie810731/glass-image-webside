@@ -1,6 +1,6 @@
 .banner {
     height: 840px;
-    background: url(assets/images/week3/banner.png) center/cover;
+    background: url(../images/week3/banner.png) center/cover;
     color: $darker-primary-color;
     @include mobile{
         height: 394px;
@@ -174,7 +174,7 @@
 }
 
 .feet {
-    background: url(/assets/images/week3/bg.png) center/cover;
+    background: url(../images/week3/bg.png) center/cover;
     padding: 60px 0 80px;
     color: $color-white;
     @include pad {

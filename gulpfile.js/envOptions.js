@@ -58,7 +58,6 @@ let envOptions = {
   },
   browserDir: distPath,
   deploySrc: `${distPath}/**/*`,
-  domainName:'glass-image-webside'
 };
 
 exports.envOptions = envOptions;
