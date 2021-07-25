@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+var urlAdjuster = require('gulp-css-replace-url');
 const $ = require('gulp-load-plugins')({ lazy: false });
 const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
@@ -17,6 +18,14 @@ function copyFile() {
       stream: true,
     }),
   );
+}
+
+function changeUrl(){
+  return gulp.src(`${envOptions.copyFile.path}/assets/style/all.css`)
+  .pipe(urlAdjuster({
+    replace:  ['assets/images',`/${envOptions.domainName}/assets/images`],
+  }))
+  .pipe(gulp.dest(`${envOptions.copyFile.path}/assets/style/`));
 }
 
 function layoutHTML() {
@@ -110,6 +119,6 @@ exports.deploy = deploy;
 
 exports.clean = clean;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs);
+exports.build = gulp.series(clean, copyFile, layoutHTML, sass,changeUrl, babel, vendorsJs);
 
 exports.default = gulp.series(clean, copyFile, layoutHTML, sass, babel, vendorsJs, gulp.parallel(browser, watch));

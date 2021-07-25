@@ -1,6 +1,6 @@
 .banner {
     height: 840px;
-    background: url(/assets/images/week3/banner.png) center/cover;
+    background: url(assets/images/week3/banner.png) center/cover;
     color: $darker-primary-color;
     @include mobile{
         height: 394px;
