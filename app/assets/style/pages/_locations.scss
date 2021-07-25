@@ -1,0 +1,128 @@
+.locations{
+    padding: 96px 0 106px;
+    @include pad{
+        padding: 60px 0 76px;
+    }
+    @include mobile{
+        padding: 28px 0 56px;
+    }
+    .c-pageHeading{
+        margin-bottom: 65px;
+        @include pad{
+            margin-bottom: 40px;
+        }
+        @include mobile{
+            margin-bottom: 24px;
+        }
+    }
+    &__branch{
+        margin-bottom: 32px;
+        font-size: $font-size-large;
+        display: flex;
+        align-items: center;
+        @include pad{
+            margin-bottom: 24px;
+            font-size: $font-size-base;
+        }
+        @include mobile{
+            font-size: $font-size-light;
+            margin-bottom: 20px;
+        }
+        &__label{
+            margin-right: 22px;
+            @include pad{
+                margin-right: 20px;
+            }
+            @include mobile{
+                margin-right: 12px;
+            }
+        }
+        .form-select{
+            width: 324px;
+            @include pad{
+                width: 237px;
+            }
+            @include mobile{
+                width: 277px;
+            }
+            @include mobile-se{
+                width: 252px;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        @include pad{
+            justify-content: space-between;
+        }
+        &__item{
+            width: 350px;
+            margin-right: 30px;
+            margin-bottom: 32px;
+            @include pad{
+                width: 330px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            @include mobile{
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            &__img{
+                display: block;
+                height: 224px;
+                width: 100%;
+                @include pad{
+                    height: 164px;
+                }
+            }
+            &__title{
+                font-size: $font-size-large;
+                padding: 12px 24px;
+                border: 1px solid $color-very-light-gray;
+                @include pad{
+                    font-size: $font-size-base;
+                    padding: 8px 24px;
+                }
+            }
+            &__descripList{
+                font-size: $font-size-medium;
+                line-height: 30px;
+                padding: 16px 26px 8px;
+                border: 1px solid $color-very-light-gray;
+                @include pad{
+                    line-height: 21px;
+                    font-size:$font-size-light
+                }
+                &__item{
+                    display: flex;
+                    margin-bottom: 8px;
+                    img{
+                        width: 18px;
+                        height: 30px;
+                        margin-right: 8px;
+                        @include pad{
+                            width: 15px;
+                            height: 21px;
+                        }
+                    }
+                }
+            }
+            &__button{
+                width: 100%;
+                background:$color-black;
+                a{
+                    display: block;
+                    color: white;
+                    font-size: 19px;
+                    line-height: 67px;
+                    @include pad{
+                        font-size: $font-size-light;
+                        line-height: 52px;
+                    }
+                }
+            }
+        }
+    }
+}

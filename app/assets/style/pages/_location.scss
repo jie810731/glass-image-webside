@@ -18,6 +18,8 @@
     &__branch{
         margin-bottom: 32px;
         font-size: $font-size-large;
+        display: flex;
+        align-items: center;
         @include pad{
             margin-bottom: 24px;
             font-size: $font-size-base;
