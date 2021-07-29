@@ -1,31 +1,31 @@
-.p-blogs{
-    &__nav{
+.p-blogs {
+    &__nav {
         background: $darker-primary-color;
         padding: 11px 0;
         margin-bottom: 40px;
-        @include mobile{
+        @include mobile {
             display: none;
         }
-        .container{
+        .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        &__list{
+        &__list {
             display: flex;
-            &__item{
+            &__item {
                 margin-right: 28px;
-                a{
+                a {
                     display: block;
                     color: $color-white;
                 }
             }
         }
-        &__search{
+        &__search {
             vertical-align: middle;
         }
     }
-    .c-pageHeading{
+    .c-pageHeading {
         margin-bottom: 60px;
         @include pad {
             margin-bottom: 40px;
@@ -35,108 +35,108 @@
             margin-bottom: 24px;
         }
     }
-    &__list{
+    &__list {
         margin-bottom: 96px;
-        @include pad{
+        @include pad {
             margin-bottom: 75px;
         }
-        @include mobile{
+        @include mobile {
             margin-bottom: 40px;
         }
-        &__item{
+        &__item {
             display: flex;
             margin-bottom: 60px;
-            @include pad{
+            @include pad {
                 margin-bottom: 24px;
             }
-            @include mobile{
+            @include mobile {
                 margin-bottom: 20px;
             }
-            a{
+            a {
                 display: flex;
                 color: $color-black;
-                @include mobile{
+                @include mobile {
                     flex-direction: column;
                 }
             }
-            &__img{
+            &__img {
                 display: block;
                 object-fit: cover;
-                max-width: 635px;
+                width: 57%;
                 height: 400px;
                 margin-right: 30px;
-                @include pad{
-                    width: 330px;
+                @include pad {
+                    width: 47%;
                     height: 208px;
                 }
-                @include mobile{
+                @include mobile {
                     width: 100%;
                     height: 217px;
                     margin-right: 0;
                     margin-bottom: 8px;
                 }
             }
-            &__content{
+            &__content {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                &__title{
+                &__title {
                     font-size: 32px;
                     color: $darker-primary-color;
-                    @include pad{
+                    @include pad {
                         font-size: $font-size-medium;
                     }
-                    @include mobile{
+                    @include mobile {
                         font-size: $font-size-base;
                     }
                 }
-                &__subTitle{
+                &__subTitle {
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 24px;
                     font-family: Roboto, sans-serif;
-                    @include pad{
+                    @include pad {
                         font-size: $font-size-light;
                         margin-bottom: 32px;
                     }
-                    @include mobile{
+                    @include mobile {
                         margin-bottom: 0;
                         font-size: $font-size-light;
                     }
-                    h4{
+                    h4 {
                         font-size: 20px;
                         font-weight: 500;
-                        @include pad{
+                        @include pad {
                             font-size: $font-size-base;
                         }
                     }
                 }
-                &__main{
+                &__main {
                     font-size: $font-size-medium;
                     color: #555555;
-                    @include pad{
+                    @include pad {
                         font-size: $font-size-light;
                     }
-                    @include mobile{
+                    @include mobile {
                         display: none;
                     }
                 }
-                &__more{
+                &__more {
                     font-size: 36px;
                     font-family: Roboto, sans-serif;
                     font-weight: 900;
                     color: $darker-primary-color;
                     align-self: flex-end;
-                    @include pad{
+                    @include pad {
                         display: none;
                     }
                 }
             }
         }
     }
-    .c-pagination{
+    .c-pagination {
         margin-bottom: 160px;
-        @include mobile{
+        @include mobile {
             margin-bottom: 56px;
         }
     }
