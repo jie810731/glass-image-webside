@@ -1,118 +1,115 @@
-.location{
+.location {
     padding: 96px 0 106px;
-    @include pad{
+    @include pad {
         padding: 60px 0 96px;
     }
-    @include mobile{
+    @include mobile {
         padding: 28px 0 56px;
     }
-    .c-pageHeading{
+    .c-pageHeading {
         margin-bottom: 65px;
-        @include pad{
+        @include pad {
             margin-bottom: 40px;
         }
-        @include mobile{
+        @include mobile {
             margin-bottom: 24px;
         }
     }
-    &__branch{
+    &__branch {
         margin-bottom: 32px;
         font-size: $font-size-large;
         display: flex;
         align-items: center;
-        @include pad{
+        @include pad {
             margin-bottom: 24px;
             font-size: $font-size-base;
         }
-        @include mobile{
+        @include mobile {
             font-size: $font-size-light;
             margin-bottom: 20px;
         }
-        &__label{
+        &__label {
             margin-right: 22px;
-            @include pad{
+            @include pad {
                 margin-right: 20px;
             }
-            @include mobile{
+            @include mobile {
                 margin-right: 12px;
             }
         }
-        .form-select{
-            width: 324px;
-            @include pad{
-                width: 237px;
+        .form-select {
+            width: 29%;
+            @include pad {
+                width: 34%;
             }
-            @include mobile{
-                width: 277px;
-            }
-            @include mobile-se{
-                width: 252px;
+            @include mobile {
+                width: 80%;
             }
         }
     }
-    &__content{
+    &__content {
         display: flex;
         justify-content: space-between;
-        @include  pad{
+        @include pad {
             flex-direction: column;
         }
-        &__descript{
-            width: 445px;
-            @include pad{
-                width :100%;
+        &__descript {
+            width: 40%;
+            @include pad {
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 32px;
             }
-            @include mobile{
+            @include mobile {
                 flex-direction: column;
                 margin-bottom: 16px;
             }
-            &__img{
+            &__img {
                 display: block;
-                @include pad{
-                    width: 330px;
+                @include pad {
+                    width: 47%;
                     height: 164px;
                 }
-                @include mobile{
+                @include mobile {
                     width: 100%;
                 }
             }
-            &__detail{
-                @include pad{
-                    width: 330px;
+            &__detail {
+                @include pad {
+                    width: 47%;
                 }
-                @include mobile{
+                @include mobile {
                     width: 100%;
                 }
-                &__title{
+                &__title {
                     padding: 12px 24px;
                     border: 1px solid $color-very-light-gray;
                     font-size: $font-size-large;
-                    @include pad{
+                    @include pad {
                         font-size: $font-size-base
                     }
-                    @include mobile{
+                    @include mobile {
                         padding: 8px 24px;
                     }
                 }
-                &__list{
+                &__list {
                     padding: 16px 26px 8px;
                     border: 1px solid $color-very-light-gray;
-                    &__item{
+                    &__item {
                         margin-bottom: 16px;
                         font-size: 20px;
                         line-height: 30px;
-                        @include pad{
+                        @include pad {
                             font-size: $font-size-light;
                             line-height: 21px;
                             margin-bottom: 8px;
                         }
-                        img{
+                        img {
                             width: 18px;
                             height: 18px;
                             margin-right: 11px;
-                            @include pad{
+                            @include pad {
                                 width: 15px;
                                 height: 15px;
                                 margin-right: 10px;
@@ -122,16 +119,15 @@
                 }
             }
         }
-        &__map{
-            width: 635px;
-            @include pad{
+        &__map {
+            width: 57%;
+            @include pad {
                 width: 100%;
                 height: 422px;
             }
-            @include mobile{
+            @include mobile {
                 height: 211px;
             }
         }
     }
-    
 }
