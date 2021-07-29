@@ -1,13 +1,14 @@
 .container {
-    max-width: 1180px;
+    max-width: 1140px;
     margin: 0 auto;
-    @include pad{
-        max-width: 690px;
+    padding: 0 15px;
+    @include pad {
+        max-width: 720px;
     }
-    @include mobile{
-        max-width: 345px;
+    @include mobile {
+        max-width: 375px;
     }
-    @include mobile-se{
+    @include mobile-se {
         max-width: 320px;
     }
 }
@@ -18,14 +19,14 @@
     justify-content: space-between;
     align-items: center;
     background: $primary-color;
-    @include mobile{
+    @include mobile {
         flex-direction: column;
         padding: 0;
     }
-    &__logo{
-        img{
+    &__logo {
+        img {
             width: 80px;
-            @include mobile{
+            @include mobile {
                 width: 48px;
                 padding: 10px 0;
             }
@@ -40,29 +41,150 @@
     display: flex;
     font-size: $font-size-medium;
     text-align: center;
-    justify-content: center;
-    @include pad{
+    @include pad {
         font-size: 20px;
     }
-    @include mobile{
+    @include mobile {
         flex-wrap: wrap;
     }
-    &__item{
-        @include mobile{
-            width: 187px;
-        }
-        @include mobile-se{
-            width: 100%;
+    &__item {
+        @include mobile {
+            width: 50%;
         }
         a {
             padding: 0 32px;
             display: block;
             color: $color-white;
-            @include pad{
+            @include pad {
                 padding: 0 20px;
             }
-            @include mobile{
+            @include mobile {
                 border: 1px solid $color-white;
+            }
+        }
+    }
+}
+
+.l-footer {
+    padding: 44px 0 39px;
+    background: $primary-color;
+    color: $color-white;
+    @include mobile {
+        padding: 24px 0;
+    }
+    a {
+        color: $color-white;
+    }
+    &__main {
+        @include mobile {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .l-menuList {
+                font-size: $font-size-base;
+                @include mobile {
+                    display: none;
+                }
+            }
+            &__mediaList {
+                display: flex;
+                align-items: center;
+                a {
+                    display: block;
+                    padding: 0 16px;
+                    @include mobile {
+                        padding: 0 12px;
+                    }
+                }
+                img {
+                    width: 48px;
+                    display: block;
+                    @include pad {
+                        width: 24px;
+                    }
+                }
+            }
+        }
+        &__contact {
+            padding-bottom: 8px;
+            margin-top: 36px;
+            @include pad {
+                margin-top: 18px;
+            }
+            @include mobile {
+                margin-top: 0;
+            }
+            &__list {
+                &__item {
+                    margin-bottom: 16px;
+                    @include pad {
+                        margin-top: 12px;
+                    }
+                    @include mobile {
+                        margin-top: 0;
+                    }
+                    a {
+                        display: block;
+                        font-size: $font-size-x-large;
+                        line-height: 1em;
+                        @include pad {
+                            font-size: 20px;
+                        }
+                        @include mobile {
+                            font-size: $font-size-base;
+                        }
+                        img {
+                            vertical-align: middle;
+                            width: 36px;
+                            margin-right: 22px;
+                            @include pad {
+                                width: 18px;
+                                margin-right: 11px;
+                            }
+                            @include mobile {
+                                max-width: 15px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__hr {
+            height: 1px;
+            background: $color-white;
+        }
+    }
+    &__rights {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-size-base;
+        @include mobile {
+            flex-direction: column;
+            font-size: $font-size-light;
+        }
+        &__policyList {
+            display: flex;
+            font-size: $font-size-light;
+            @include mobile {
+                flex-direction: column;
+            }
+            &__item {
+                margin-left: 48px;
+                @include pad {
+                    margin-left: 24px;
+                }
+                @include mobile {
+                    margin-top: 8px;
+                    margin-left: 0;
+                }
             }
         }
     }

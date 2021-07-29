@@ -2,7 +2,10 @@
     height: 840px;
     background: url(../images/week3/banner.png) center/cover;
     color: $darker-primary-color;
-    @include mobile{
+    @include pad {
+        background: url(../images/week3/banner-sm.png) center/cover;
+    }
+    @include mobile {
         height: 394px;
     }
     &__wording {
@@ -17,7 +20,7 @@
             @include pad {
                 font-size: $font-size-xx-large;
             }
-            @include mobile{
+            @include mobile {
                 font-size: 32px;
             }
         }
@@ -41,11 +44,11 @@
     @include pad {
         padding: 40px 0 56px;
     }
-    @include mobile{
+    @include mobile {
         padding: 32px 0 0;
     }
-    .p-index-sectionTitle{
-        @include mobile{
+    .p-index-sectionTitle {
+        @include mobile {
             font-size: $font-size-large;
         }
     }
@@ -54,21 +57,24 @@
         justify-content: space-between;
         margin-top: 48px;
         @include pad {
-            width: 615px;
             flex-wrap: wrap;
             margin-right: auto;
             margin-left: auto;
         }
-        @include mobile{
-            width: 255px;
+        @include mobile {
             margin-top: 20px;
         }
         &__item {
             text-align: center;
+            width: 22%;
             @include pad {
+                width: 50%;
+                padding: 0 6%;
                 margin-bottom: 44px;
             }
-            @include mobile{
+            @include mobile {
+                width: 100%;
+                padding: 0 13%;
                 margin-top: 40px;
             }
             &__img {
@@ -83,9 +89,9 @@
                 font-weight: bold;
             }
             &__body {
-                width: 255px;
                 margin-top: 8px;
                 color: $color-black;
+                text-align: left;
             }
         }
     }
@@ -97,7 +103,7 @@
     @include pad {
         padding: 40px 0 48px;
     }
-    @include mobile{
+    @include mobile {
         padding: 32px 0;
     }
     &__list {
@@ -105,7 +111,7 @@
         @include pad {
             margin-top: 32px;
         }
-        @include mobile{
+        @include mobile {
             margin-top: 20px;
         }
         &__item {
@@ -115,7 +121,7 @@
             @include pad {
                 margin-bottom: 8px;
             }
-            @include mobile{
+            @include mobile {
                 position: relative;
             }
             &:nth-child(even) {
@@ -125,17 +131,17 @@
                 }
             }
             &__img {
-                width: 635px;
+                width: 56%;
                 display: block;
-                @include pad {
-                    width: 390px;
+                @include mobile {
+                    width: 100%;
                 }
             }
             &__body {
                 margin: 0 30px;
                 color: $primary-color;
                 display: block;
-                @include mobile{
+                @include mobile {
                     position: absolute;
                     margin: 0 auto;
                     width: 100%;
@@ -180,7 +186,7 @@
     @include pad {
         padding: 40px 0 56px;
     }
-    @include mobile{
+    @include mobile {
         padding: 32px 0 24px;
     }
     &__list {
@@ -190,26 +196,25 @@
         @include pad {
             margin-top: 32px;
         }
-        @include mobile{
+        @include mobile {
             margin-top: 20px;
             flex-wrap: wrap;
         }
         &__item {
             position: relative;
-            @include mobile{
-                margin-bottom: 16px;
+            width: 48%;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                background: white;
+                opacity: 0.5;
             }
-            &__img {
-                max-width: 540px;
-                @include pad {
-                    max-width: 330px;
-                }
-                @include mobile {
-                    max-width: 345px;
-                }
-                @include mobile-se {
-                    max-width: 320px;
-                }
+            @include mobile {
+                margin-bottom: 16px;
+                width: 100%;
             }
             &__wording {
                 position: absolute;
@@ -217,11 +222,12 @@
                 transform: translate(0, -50%);
                 width: 100%;
                 text-align: center;
-                color: $darker-primary-color;
+                color: $primary-color;
                 font-weight: bold;
                 font-family: Roboto, sans-serif;
                 font-size: 72px;
                 line-height: 108px;
+                z-index: 1;
                 @include pad {
                     font-size: 32px;
                 }
@@ -231,13 +237,13 @@
 }
 
 .customRecommend {
-    padding: 60px 0 80px ;
+    padding: 60px 0 80px;
     color: $darker-primary-color;
     @include pad {
         padding: 40px 0 24px;
     }
     @include mobile {
-        padding: 32px 0 24px ;
+        padding: 32px 0 24px;
     }
     &__list {
         margin-top: 40px;
@@ -247,31 +253,31 @@
             margin-top: 32px;
             flex-wrap: wrap;
         }
-        @include mobile{
+        @include mobile {
             margin-top: 20px;
         }
         &__item {
-            width: 255px;
+            width: 22%;
+            ;
             font-size: $font-size-light;
             color: $color-very-black-blue;
             border: 1px solid #DEE2E6;
             box-shadow: 0 2px 6px #00000029;
             border-radius: 4px;
             @include pad {
-                width: 330px;
+                width: 47%;
                 margin-bottom: 32px;
             }
-            @include mobile{
-                width: 345px;
+            @include mobile {
+                width: 100%;
                 margin-bottom: 16px;
             }
             &__img {
                 display: block;
                 height: 256px;
                 margin-bottom: 16px;
-                background-size: cover;
-                background-position: top;
-                @include mobile{
+                object-fit: cover;
+                @include mobile {
                     width: 100%;
                 }
             }
@@ -305,20 +311,14 @@
         padding: 40px 0 56px 0;
         font-size: 14px;
     }
-    @include mobile{
-        padding: 30px 0 40px ;
+    @include mobile {
+        padding: 30px 0 40px;
     }
-    &__form {
-        margin: 24px auto 0;
-        width: 730px;
-        @include pad {
-            width: 450px;
-        }
-        @include mobile{
-            max-width: 345px;
-        }
-        @include mobile-se{
-            max-width: 320px;
+    &__content {
+        width: 65%;
+        margin: 0 auto;
+        @include mobile {
+            width: 100%;
         }
         &__discript {
             font-size: $font-size-medium;
@@ -326,155 +326,35 @@
             @include pad {
                 font-size: $font-size-base;
             }
-            @include mobile{
+            @include mobile {
                 margin-bottom: 8px;
             }
         }
-        &__row{
-            margin-bottom: 16px;
-            @include mobile{
-                margin-bottom: 8px;
-            }
-        }
-        &__suggest {
-            height: 136px;
-            resize: none;
-        }
-        &__submit {
-            display: block;
-            margin: 40px auto 0;
-            padding: 16px 143px;
-            color: $color-white;
-            background: $primary-color;
-            @include pad {
-                margin: 20px auto 0;
-            }
-            @include mobile{
-                padding: 8px 54px;
-            }
-        }
-    }
-}
-
-.footer {
-    padding: 44px 0 39px;
-    background: $primary-color;
-    color: $color-white;
-    @include mobile{
-        padding: 24px 0;
-    }
-    a {
-        color: $color-white;
-    }
-    &__main{
-        @include mobile{
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-        &__head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .l-menuList{
-                font-size: $font-size-base;
-                @include mobile{
-                    display: none;
+        &__form {
+            margin: 24px auto 0;
+            &__row {
+                margin-bottom: 16px;
+                @include mobile {
+                    margin-bottom: 8px;
                 }
             }
-            &__mediaList {
-                display: flex;
-                align-items: center;
-                a {
-                    display: block;
-                    padding: 0 16px;
-                    @include mobile{
-                        padding: 0 12px;
-                    }
+            &__suggest {
+                height: 136px;
+                resize: none;
+            }
+            &__submit {
+                width: 47%;
+                display: block;
+                margin: 40px auto 0;
+                padding: 16px 0px;
+                color: $color-white;
+                background: $primary-color;
+                cursor: pointer;
+                &:hover {
+                    background: $darker-primary-color;
                 }
-                img {
-                    width: 48px;
-                    display: block;
-                    @include pad {
-                        width: 24px;
-                    }
-                }
-            }
-        }
-        &__contact {
-            padding-bottom: 8px;
-            margin-top: 36px;
-            @include pad {
-                margin-top: 18px;
-            }
-            @include mobile{
-                margin-top: 0;
-            }
-            &__list {
-                &__item {
-                    margin-bottom: 16px;
-                    @include pad {
-                        margin-top: 12px;
-                    }
-                    @include mobile{
-                        margin-top: 0;
-                    }
-                    a {
-                        display: block;
-                        font-size: $font-size-x-large;
-                        line-height: 1em;
-                        @include pad {
-                            font-size: 20px;
-                        }
-                        @include mobile{
-                            font-size: $font-size-base;
-                        }
-                        img {
-                            vertical-align: middle;
-                            width: 36px;
-                            margin-right: 22px;
-                            @include pad {
-                                width: 18px;
-                                margin-right: 11px;
-                            }
-                            @include mobile{
-                                max-width: 15px;
-                                margin-right: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        &__hr{
-            height: 1px;
-            background: $color-white;
-        }
-    }
-    &__rights {
-        margin-top: 32px;
-        display: flex;
-        justify-content: space-between;
-        font-size: $font-size-base;
-        @include mobile{
-            flex-direction: column;
-            font-size: $font-size-light;
-        }
-        &__policyList {
-            display: flex;
-            font-size: $font-size-light;
-            @include mobile{
-                flex-direction: column;
-            }
-            &__item {
-                margin-left: 48px;
                 @include pad {
-                    margin-left: 24px;
-                }
-                @include mobile{
-                    margin-top: 8px;
-                    margin-left: 0;
+                    margin: 20px auto 0;
                 }
             }
         }
@@ -488,7 +368,7 @@
     @include pad {
         font-size: 32px;
     }
-    @include mobile{
+    @include mobile {
         font-size: 20px;
     }
 }
