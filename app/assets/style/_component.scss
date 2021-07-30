@@ -49,16 +49,59 @@
             font-size: 18px;
             font-family: Roboto, sans-serif;
             color: #555555;
-            @include mobile{
+            @include mobile {
                 font-size: $font-size-base;
                 padding: 10px 12px;
             }
         }
     }
-    &--active{
-        background:$color-black;
-        a{
+    &--active {
+        background: $color-black;
+        a {
             color: $color-white !important;
         }
+    }
+}
+
+.c-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    list-style: none;
+    @include pad {
+        font-size: $font-size-light;
+    }
+    &__item {
+        +.c-breadcrumb__item {
+            padding-left: 0.5rem;
+            &::before {
+                float: left;
+                padding-right: 0.5rem;
+                color: $color-black;
+                content: '/';
+            }
+        }
+        a {
+            color: $color-black;
+        }
+    }
+    .active {
+        color: $primary-color;
+    }
+}
+
+.c-tag {
+    display: inline-block;
+    line-height: 1em;
+    color: $primary-color;
+    font-size: $font-size-large;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    @include pad {
+        font-size: $font-size-base;
+    }
+    &::before {
+        float: left;
+        content: '#';
     }
 }

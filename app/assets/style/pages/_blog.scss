@@ -1,0 +1,210 @@
+.p-blog {
+    .p-blogs__nav {
+        margin-bottom: 0;
+        @include mobile {
+            display: flex;
+        }
+        .container {
+            @include mobile {
+                width: 100%;
+            }
+        }
+        &__list {
+            @include mobile {
+                width: 100%;
+                justify-content: space-between;
+            }
+            &__item {
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__search {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    &__tagList {
+        display: flex;
+        &__item {
+            margin-right: 16px;
+            @include pad {
+                margin-right: 8px;
+            }
+            @include mobile {
+                margin-right: 4px;
+            }
+        }
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+        }
+        &__article {
+            width: 74%;
+            @include mobile {
+                width: 100%;
+            }
+            &__title {
+                font-size: $font-size-xx-large;
+                margin-bottom: 8px;
+                @include pad {
+                    font-size: 32px;
+                }
+                @include mobile {
+                    font-size: 20px;
+                    color: $primary-color;
+                }
+            }
+            &__subTitle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 24px;
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+                h3 {
+                    font-weight: 500;
+                    font-size: 28px;
+                    @include pad {
+                        font-size: $font-size-base;
+                    }
+                    @include mobile {
+                        font-size: $font-size-light;
+                    }
+                }
+                time {
+                    color: #6C6C6C;
+                }
+            }
+            &__share {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                @include mobile {
+                    margin-bottom: 16px;
+                }
+                &__icon {
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    background: black;
+                    margin-right: 16px;
+                    @include pad {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                span {
+                    font-size: $font-size-medium;
+                    font-weight: bold;
+                    margin-right: 20px;
+                    @include pad {
+                        font-size: $font-size-base;
+                        margin-right: 16px;
+                    }
+                }
+            }
+            &__img {
+                margin-bottom: 24px;
+                width: 100%;
+                @include pad {
+                    margin-bottom: 16px;
+                }
+            }
+            &__p {
+                margin-bottom: 40px;
+                font-size: 20px;
+                color: #0A0A0A;
+                opacity: 0.6;
+                @include pad {
+                    font-size: $font-size-base;
+                    margin-bottom: 24px;
+                }
+            }
+            &__more {
+                border-top: 1px solid #707070;
+                padding-top: 24px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 160px;
+                @include pad {
+                    padding-top: 16px;
+                    margin-bottom: 96px;
+                }
+                @include mobile {
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+                &__item {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: $color-black;
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 12px;
+                            @include pad {
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 8px;
+                            }
+                            @include mobile {
+                                margin-right: 4px;
+                            }
+                        }
+                        span {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        &__tages {
+            width: 22%;
+            @include mobile {
+                width: 100%;
+                margin-bottom: 56px;
+            }
+            &__title {
+                color: $primary-color;
+                font-size: 28px;
+                line-height: 1em;
+                font-weight: bold;
+                margin-bottom: 9px;
+                @include pad {
+                    font-size: 20px;
+                    line-height: 1em;
+                    margin-bottom: 8px;
+                }
+                img {
+                    width: 38px;
+                    height: 28px;
+                    vertical-align: middle;
+                    @include pad {
+                        width: 19px;
+                        height: 20px;
+                    }
+                }
+            }
+            &__list {
+                display: flex;
+                flex-wrap: wrap;
+                &__item {
+                    margin-right: 24px;
+                    margin-bottom: 8px;
+                    @include pad {
+                        margin-right: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
