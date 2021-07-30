@@ -1,4 +1,4 @@
-.p-optical-productCategoryList {
+.p-products-productCategoryList {
     display: flex;
     justify-content: center;
     &__item {
@@ -43,7 +43,7 @@
     }
 }
 
-.p-optical-carousel__list {
+.p-products-carousel__list {
     display: flex;
     margin-bottom: 80px;
     @include pad {
@@ -62,7 +62,7 @@
     }
 }
 
-.p-optical-h2 {
+.p-products-h2 {
     text-align: center;
     font-size: 42px;
     font-family: Roboto, sans-serif;
@@ -75,7 +75,7 @@
     }
 }
 
-.p-optical-h3 {
+.p-products-h3 {
     text-align: center;
     font-size: 32px;
     font-family: Roboto, sans-serif;
@@ -89,22 +89,23 @@
     }
 }
 
-.p-optical-productList {
+.p-products-productList {
     display: flex;
     flex-wrap: wrap;
     @include pad {
         justify-content: space-between;
     }
     &__item {
-        width: 255px;
+        width: 22%;
         margin-bottom: 104px;
         margin-right: 30px;
         @include pad {
-            width: 330px;
+            width: 47%;
             margin-right: 0;
             margin-bottom: 72px;
         }
         @include mobile {
+            width: 100%;
             margin-bottom: 32px;
         }
         &__img {
